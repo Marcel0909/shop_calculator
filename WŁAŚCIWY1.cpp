@@ -9,7 +9,10 @@ int main()
     cout<<"2. Jaka cena wychodzi za litr"<<endl;
     cout<<"3. Ile wynosi rabat oraz jaka cena bedzie po rabacie"<<endl;
     cout<<"4. Promocje typu kup pare a dostaniesz paredziesiat % znizki"<<endl;
-    cout<<"Wybierz: 1,2,3 lub 4"<<endl;
+    cout<<"5. Jaki procent stanowi konkretna liczba"<<endl;
+    cout<<"6. Ile wynosi 100%"<<endl;
+    cout<<"7. Ile wynosi dany %"<<endl;
+    cout<<"Wybierz: 1,2,3,4,5,6 lub 7"<<endl;
     cin>> wybor;
     if(wybor==1)
     {
@@ -51,7 +54,7 @@ int main()
         double rabat;
         rabat=pelnacena-znizka;
         cout.precision(3);
-        cout<<"Cena po rabacie wyniosi "<<fixed<<rabat<<"zl"<<endl;  \\\\\\ogarn¹æ cene za kilogram
+        cout<<"Cena po rabacie wyniosi "<<fixed<<rabat<<"zl"<<endl;
     }
     else if(wybor==4)
     {
@@ -67,9 +70,9 @@ int main()
         cout.precision(2);
         cout<<"Cena koncowa wynosi"<<fixed<<cenakoncowa<<endl;
     }
-    if(a==5)
+    if(wybor==5)
     {
-        cout<<"WYBRANO: 1. Liczyl jaki procent stanowi konkretna liczba"<<endl;
+        cout<<"Wybrano program numer 5"<<endl;
         float c;
         int b,d;
         cout<<"Ile wynosi liczba ktora chcesz sprawdzic"<<endl;
@@ -80,16 +83,16 @@ int main()
 
         cout<<b<<" "<< "stanowi"<<" "<<fixed<<c<<"% z liczby"<<" "<<d<<endl;
     }
-    else if(a==6)
+    else if(wybor==6)
     {
-        cout<<" WYBRANO: 2. Ile wynosi 100%"<<endl;
+        cout<<" Wybrano program numer 6"<<endl;
         float d;
         int b,c;
         cout<<"Podaj liczbe"<< endl;
         cin>>b;
         cout<<"Ile wynosi %"<<endl;
         cin>>c;
-        if(b==c)
+        if(wybor==c)
         {
             d=(b*100)/b;
             cout.precision(3);
@@ -104,9 +107,9 @@ int main()
 
 
     }
-    else if(a==7)
+    else if(wybor==7)
     {
-        cout<<"WYBRANO: 3. Ile wynosi dany %"<<endl;
+        cout<<"Wybrano program numer 7"<<endl;
         float b;
         int c,d;
         cout<<" Podaj %"<<endl;
