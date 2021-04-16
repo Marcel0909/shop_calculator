@@ -11,21 +11,11 @@ void wybor_1(void)
   cin>>gramy;
   cout<<"Ile kosztuje produkt"<<endl;
   cin>>cena;
-  if(gramy <= 0 || cena <= 0)
-  {
-      cout<<"Jedna z podanych wartoœci wynosi 0"<<endl;
-      cout<<"Podaj wartoœci ponownie"<<endl;
-      cout<<"Ile gram ma produkt?"<<endl;
-      double gramy,cena, cenazakilogram;
-      cin>>gramy;
-      cout<<"Ile kosztuje produkt"<<endl;
-      cin>>cena;
-      while(gramy <= 0 || cena <=0)
+  while(gramy <= 0 || cena <=0)
       {
           cout<<"Jedna z podanych wartoœci wynosi 0 lub jest ujemne"<<endl;
           cout<<"Podaj wartosc ponownie"<<endl;
           cout<<"Ile gram ma produkt?"<<endl;
-          double gramy,cena;
           cin>>gramy;
           cout<<"Ile kosztuje produkt"<<endl;
           cin>>cena;
@@ -34,13 +24,7 @@ void wybor_1(void)
       cout.precision(2);
       cout<<"Cena za kilogram wynosi"<<" "<<fixed<<cenazakilogram<<"zl"<<endl;
 }
-else
-{
-    cenazakilogram=(cena*1000)/gramy;
-    cout.precision(2);
-    cout<<"Cena za kilogram wynosi"<<" "<<fixed<<cenazakilogram<<"zl"<<endl;
-}
-}
+
 void wybor_2(void)
 {
     cout<<"Wybrano program numer 1"<<endl;
@@ -49,21 +33,11 @@ void wybor_2(void)
     cin>>mililitry;
     cout<<"Ile kosztuje produkt"<<endl;
     cin>>cena;
-    if(cena <= 0 || mililitry <= 0)
-    {
-        cout<<"Jedna z podanych wartosci wynosi 0 lub jest ujemne"<<endl;
-        cout<<"Podaj wartosc ponownie"<<endl;
-        cout<<"Ile mililitrow ma produkt?"<<endl;
-        double mililitry,cena, cenazalitr;
-        cin>>mililitry;
-        cout<<"Ile kosztuje produkt"<<endl;
-        cin>>cena;
-        while(cena <= 0 || mililitry == 0)
+    while(cena <= 0 || mililitry == 0)
         {
             cout<<"Jedna z podanych wartoœci wynosi 0 lub jest ujemne"<<endl;
             cout<<"Podaj wartosc ponownie"<<endl;
             cout<<"Ile mililitrow ma produkt?"<<endl;
-            double mililitry,cena;
             cin>>mililitry;
             cout<<"Ile kosztuje produkt"<<endl;
             cin>>cena;
@@ -72,13 +46,6 @@ void wybor_2(void)
         cout.precision(2);
         cout<<"Cena za litr wynosi"<<fixed<<cenazalitr<<endl;
     }
-    else
-    {
-        cenazalitr=(cena*1000)/mililitry;
-        cout.precision(2);
-        cout<<"Cena za litr wynosi"<<fixed<<cenazalitr<<endl;
-    }
-}
 
 void wybor_3(void)
 {
@@ -88,15 +55,6 @@ void wybor_3(void)
         cin>>procent1;
         cout<<"Ile kosztuje produkt"<<endl;
         cin>>pelnacena;
-        if(procent1 <= 0 || pelnacena <= 0)
-        {
-            cout<<"Jedna z podanych wartosci wynosi 0 lub jest ujemne"<<endl;
-            cout<<"Podaj wartosc ponownie"<<endl;
-            cout<<"Podaj %"<<endl;
-            double proecnt1, pelnacena;
-            cin>>procent1;
-            cout<<"Ile kosztuje produkt"<<endl;
-            cin>>pelnacena;
             while(procent1 <= 0 || pelnacena <= 0)
             {
                 cout<<"Jedna z podanych wartosci wynosi 0 lub jest ujemne"<<endl;
@@ -115,19 +73,6 @@ void wybor_3(void)
             cout.precision(3);
             cout<<"Cena po rabacie wyniosi "<<fixed<<rabat<<"zl"<<endl;
         }
-        else
-        {
-            znizka=(procent1*pelnacena)/100;
-            cout.precision(3);
-            cout<<procent1<<"%"<<" "<< "wynosi"<<" "<<fixed<<znizka<<"zl"<<endl;
-            double rabat;
-            rabat=pelnacena-znizka;
-            cout.precision(3);
-            cout<<"Cena po rabacie wyniosi "<<fixed<<rabat<<"zl"<<endl;
-        }
-
-
-}
 
 void wybor_4(void)
 {
@@ -138,15 +83,6 @@ void wybor_4(void)
         cin>>gramy;
         cout<<"Ile kosztuje produkt"<<endl;
         cin>>cena;
-        if(gramy <= 0 || cena <= 0)
-  {
-      cout<<"Jedna z podanych wartoœci wynosi 0"<<endl;
-      cout<<"Podaj wartoœci ponownie"<<endl;
-      cout<<"Ile gram ma produkt?"<<endl;
-      double gramy,cena, cenazakilogram;
-      cin>>gramy;
-      cout<<"Ile kosztuje produkt"<<endl;
-      cin>>cena;
       while(gramy <= 0 || cena <=0)
       {
           cout<<"Jedna z podanych wartoœci wynosi 0 lub jest ujemne"<<endl;
@@ -166,18 +102,7 @@ void wybor_4(void)
         cout.precision(2);
         cout<<"Cena koncowa wynosi"<<fixed<<cenakoncowa<<endl;
 }
-else
-{
-        cenazakilogram=(cena*1000)/gramy;
-        cout<<"Ile procent znizki zostanie odliczone?"<<endl;
-        cin>>procentznizka;
-        cout<<"Ile produktow musisz kupic aby otrzymac znizke"<<endl;
-        cin>>produkty;
-        cenakoncowa=(cenazakilogram*produkty)-(procentznizka*(cenazakilogram)*produkty)/100;
-        cout.precision(2);
-        cout<<"Cena koncowa wynosi"<<fixed<<cenakoncowa<<endl;
-}
-}
+
 void wybor_5(void)
 {
         cout<<"Wybrano program numer 5"<<endl;
@@ -227,15 +152,6 @@ void wybor_6(void)
         cin>>b;
         cout<<"Ile wynosi %"<<endl;
         cin>>c;
-        if(b <= 0 || c<= 0)
-        {
-            cout<<"Jedna z podanych wartosci wynosi 0 lub jest ujemne"<<endl;
-            cout<<"Podaj wartosc ponownie"<<endl;
-            float d,b,c;
-            cout<<"Podaj liczbe"<< endl;
-            cin>>b;
-            cout<<"Ile wynosi %"<<endl;
-            cin>>c;
             while(b <= 0 || c <= 0)
             {
                 cout<<"Jedna z podanych wartosci wynosi 0 lub jest ujemne"<<endl;
@@ -259,24 +175,7 @@ void wybor_6(void)
             cout<<"100% wynosi"<<" "<<fixed<<d<<endl;
         }
         }
-        else
-        {
-            if(b == c)
-        {
-            d=(b*100)/b;
-            cout.precision(3);
-            cout<<"100% wynosi"<<" "<<fixed<<d<<endl;
-        }
-        else
-        {
-            d=(b*100)/c;
-            cout.precision(3);
-            cout<<"100% wynosi"<<" "<<fixed<<d<<endl;
-        }
-        }
 
-
-}
 
 void wybor_7(void)
 {
@@ -286,15 +185,6 @@ void wybor_7(void)
         cin>>c;
         cout<<"Podaj ile wynosi 100%"<<endl;
         cin>>d;
-        if(c <= 0 || d <= 0)
-        {
-            cout<<"Jedna z podanych wartosci wynosi 0 lub jest ujemne"<<endl;
-            cout<<"Podaj wartosc ponownie"<<endl;
-            float b,c,d;
-            cout<<" Podaj %"<<endl;
-            cin>>c;
-            cout<<"Podaj ile wynosi 100%"<<endl;
-            cin>>d;
             while(c <= 0 || d <= 0)
             {
                 cout<<"Jedna z podanych wartosci wynosi 0 lub jest ujemne"<<endl;
@@ -309,14 +199,6 @@ void wybor_7(void)
             cout.precision(3);
             cout<<c<<"%"<<" "<< "wynosi"<<" "<<fixed<<b<<endl;
         }
-        else
-        {
-            b=(c*d)/100;
-        cout.precision(3);
-        cout<<c<<"%"<<" "<< "wynosi"<<" "<<fixed<<b<<endl;
-        }
-
-}
 
 
 int main()
