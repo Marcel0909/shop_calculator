@@ -33,7 +33,7 @@ void wybor_2(void)
     cin>>mililitry;
     cout<<"Ile kosztuje produkt"<<endl;
     cin>>cena;
-    while(cena <= 0 || mililitry == 0)
+    while(cena <= 0 || mililitry <= 0)
         {
             cout<<"Jedna z podanych wartoœci wynosi 0 lub jest ujemne"<<endl;
             cout<<"Podaj wartosc ponownie"<<endl;
@@ -122,7 +122,7 @@ void wybor_5(void)
             cin>>b;
             cout<<"Ile wynosi 100%"<<endl;
             cin>>d;
-            while(b <= 0 || d == 0)
+            while(b <= 0 || d <= 0)
                 {
                     cout<<"Jedna z podanych wartoœci wynosi 0 lub jest ujemne"<<endl;
                     cout<<"Podaj wartosc ponownie"<<endl;
